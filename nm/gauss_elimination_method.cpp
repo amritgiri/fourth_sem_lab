@@ -47,8 +47,8 @@ int main(){
         s=0;
         for(j=i+1; j<N; j++){
             s+=a[i][j]*x[j];
-            x[i] = (a[i][N]-s)/a[i][j];
         }
+        x[i] = (a[i][N]-s)/a[i][j];
     }
 
     // printing the result
