@@ -12,7 +12,7 @@ int main(){
     int i,j,k;
 
     cout<<"Enter the elements of the augmented matirx rowwise: "<<endl;
-
+    cout<<fixed;
     for(i=0;i<N;i++){
         for(j=0;j<N+1;j++){
             cout<<"a["<<i<<"]["<<j<<"]";
@@ -36,7 +36,7 @@ int main(){
 
     for(i=0;i<N;i++){
         for(j=0;j<N+1;j++){
-            cout<<a[i][j];
+            cout<<a[i][j]<<"\t";
         }
         cout<<endl;
     }
@@ -48,7 +48,7 @@ int main(){
         for(j=i+1; j<N; j++){
             s+=a[i][j]*x[j];
         }
-        x[i] = (a[i][N]-s)/a[i][j];
+        x[i] = (a[i][N]-s)/a[i][i];
     }
 
     // printing the result
