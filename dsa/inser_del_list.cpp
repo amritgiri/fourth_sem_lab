@@ -194,9 +194,9 @@ void RanDelete(){
                 }
             }
         // }
-        for(int i=SIZE; i>=0; i--){
+        for(int i=SIZE-1; i>=0; i--){
             if(list[i]!=0){
-                rare = i;
+                rare = i+1;
                 break;
             }
         }
