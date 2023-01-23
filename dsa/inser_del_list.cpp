@@ -60,7 +60,7 @@ int main(){
 }
 
 void BegInsert(){
-    int check = 0;
+    int check = 0;//check for empty
     for(int i=0; i<SIZE; i++){
         if(list[i]==0){
             check=1;
@@ -94,7 +94,39 @@ void BegInsert(){
 }
 
 void RanInsert(){
+    int check = 0;//check for empty
+    for(int i=0; i<SIZE; i++){
+        if(list[i]==0){
+            check=1;
+            index = i;
+            break;
+        }
+        else{
+            check=0;
+        }
+    }
 
+    if(check!=1){
+        cout<<"List is full";
+    }
+    else{
+        cout<<"Index that are free are: "<<endl;
+        for(int i = 0;i<SIZE;i++){
+            if(list[i]==0){
+                cout<<i<<"\t";
+            }
+        }
+        cout<<endl;
+        cout<<"Enter the index to insert new element: ";
+        if(index<SIZE){
+            cin>>index;
+            cout<<"Enter the element to insert: ";
+            cin>>list[index];
+        }else{
+            cout<<"invalid";
+        }
+    }
+    cout<<endl<<endl;
 }
 
 void EndInsert(){
