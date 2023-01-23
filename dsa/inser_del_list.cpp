@@ -123,15 +123,26 @@ void RanInsert(){
             cout<<"Enter the element to insert: ";
             cin>>list[index];
         }else{
-            cout<<"invalid";
+            cout<<"Invalid choice";
         }
     }
     cout<<endl<<endl;
 }
 
 void EndInsert(){
-    if(rare == SIZE){
-        cout<<"list is full"<<endl<<endl;
+    int check = 0;//check for empty
+    for(int i=0; i<SIZE; i++){
+        if(list[i]==0){
+            check=1;
+            index = i;
+            break;
+        }
+        else{
+            check=0;
+        }
+    }
+    if(check!=1){
+        cout<<"List is full"<<endl<<endl;
     }
     else{
         cout<<"Enter the element to insert at the end: ";
@@ -155,7 +166,43 @@ void BegDelete(){
 }
 
 void RanDelete(){
+    if(front==rare){
+        cout<<"No element to delete";
+    }
+    else{
+        cout<<"List that has elements: "<<endl;
+        for(int i=0;i<SIZE;i++){
+            if(list[i]!=0){
+                cout<<i<<"\t";
+            }
+        }
+        cout<<endl<<"Enter the index to delete element from that index: ";
+        if(index<SIZE){
+            cin>>index;
+            temp = list[index];
+            list[index]=0;
+            cout<<"Element that has been deleted: "<<temp;
+        }
+        else{
+            cout<<"Invalid choice";
+        }
+        // if(index == 0){
+            for(int i=0;i<SIZE;i++){
+                if(list[i]!=0){
+                    front = i;
+                    break;
+                }
+            }
+        // }
+        for(int i=SIZE; i>=0; i--){
+            if(list[i]!=0){
+                rare = i;
+                break;
+            }
+        }
 
+    }
+    cout<<endl<<endl;
 }
 
 void EndDelete(){
