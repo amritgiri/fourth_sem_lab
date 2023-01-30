@@ -4,7 +4,7 @@ from graphics import *
 import time
 import math
 
-win = GraphWin("Scaling",900,900)
+win = GraphWin("Scaling",1000,1000)
 
 def main():
     print("Enter the coordinates: \n")
@@ -16,7 +16,7 @@ def main():
     y3 = int(input("y3 = "))
 
     t = int(input("Angle for rotation = "))
-    a = int(math.radians(t))
+    a = t*(3.14/180)
 
     xr = int((x1+x2+x3)/3)
     yr = int((y1+y2+y3)/3)
@@ -59,12 +59,12 @@ def line(x1,y1,x2,y2,color):
 
 
 def rotation(x1,y1,x2,y2,x3,y3,a,xr,yr):
-    xa=int((x1*math.cos(a))-(y1*math.sin(a))+((yr*math.sin(a))-(xr*math.cos(a))+xr))
-    ya=int((x1*math.sin(a))+(y1*math.cos(a))+((-xr*math.sin(a))-(yr*math.cos(a))+yr))
-    xb=int((x2**math.cos(a))-(y2*math.sin(a))+((yr*math.sin(a))-(xr*math.cos(a))+xr))
-    yb=int((x2*math.sin(a))+(y2*math.cos(a))+((-xr*math.sin(a))-(yr*math.cos(a))+yr))
-    xc=int((x3**math.cos(a))-(y3*math.sin(a))+((yr*math.sin(a))-(xr*math.cos(a))+xr))
-    yc=int((x3*math.sin(a))+(y3*math.cos(a))+((-xr*math.sin(a))-(yr*math.cos(a))+yr))
+    xa=abs(int((x1*math.cos(a))-(y1*math.sin(a))+((yr*math.sin(a))-(xr*math.cos(a))+xr)))
+    ya=abs(int((x1*math.sin(a))+(y1*math.cos(a))+((-xr*math.sin(a))-(yr*math.cos(a))+yr)))
+    xb=abs(int((x2**math.cos(a))-(y2*math.sin(a))+((yr*math.sin(a))-(xr*math.cos(a))+xr)))
+    yb=abs(int((x2*math.sin(a))+(y2*math.cos(a))+((-xr*math.sin(a))-(yr*math.cos(a))+yr)))
+    xc=abs(int((x3**math.cos(a))-(y3*math.sin(a))+((yr*math.sin(a))-(xr*math.cos(a))+xr)))
+    yc=abs(int((x3*math.sin(a))+(y3*math.cos(a))+((-xr*math.sin(a))-(yr*math.cos(a))+yr)))
 
     line(xa,ya,xb,yb,"blue")
     line(xa,ya,xc,yc,"blue")

@@ -13,6 +13,10 @@ def main():
     x3 = int(input("x3 = "))
     y3 = int(input("y3 = "))
 
+    line(x1,y1,x2,y2,"red")
+    line(x1,y1,x3,y3,"red")
+    line(x2,y2,x3,y3,"red")
+
     sx = int(input("Scaling factor sx = "))
     sy = int(input("Scaling factor sy = "))
 
@@ -21,9 +25,6 @@ def main():
 
     print(xr,yr)
 
-    line(x1,y1,x2,y2,"red")
-    line(x1,y1,x3,y3,"red")
-    line(x2,y2,x3,y3,"red")
 
     scaling(x1,y1,x2,y2,x3,y3,sx,sy,xr,yr)
 
