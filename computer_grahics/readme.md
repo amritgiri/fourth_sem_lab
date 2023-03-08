@@ -1,3 +1,30 @@
+# Process 
+### The code of computer graphics is written and compiled in python programming language
+------
+# For graphics
+- make sure the file 'graphics.py' is in the same directory 
+["https://github.com/amritgiri/fourth_sem_lab/blob/main/computer_grahics/graphics.py"] 
+this file can be obtain from google also
+["https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjX3oHc5MP9AhWw-TgGHcfdCjIQFnoECAkQAQ&url=https%3A%2F%2Fmcsp.wartburg.edu%2Fzelle%2Fpython%2Fgraphics.py&usg=AOvVaw0BK1u3K7Zlz11wKnnaJKPS"]
+- After downloading the file copy it to the project folder
+- Now, import the file as:
+```py
+    from graphics import *
+```
+- Now you are ready to perform graphics as in C/C++ programming language
+--------
+# For OpenGL
+- Make sure you install pyopengl in your system
+```
+$ suo apt update
+$ sudo pip3 install pyopengl
+$ pip install PyOpenGL PyOpenGL_accelerate
+$ sudo apt-get install python-pygame
+```
+
+--------
+--------
+# Questions
 ### 1) To be familiar with DDA Line drawing algorithm.
 
 WAP to implement DDA algorithm to draw the following AB Lines:
@@ -54,4 +81,5 @@ b) Radius-x=160, Radius-y=250 and Center (300,300)
 coordinates and draw it.
 2) Shear the square relative to the Yref =-10 and Shx = 1. Calculate the final
 coordinates and draw it.
-
+-----
+### 8) Draw letter B using Opengl

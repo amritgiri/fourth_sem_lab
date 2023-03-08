@@ -24,12 +24,12 @@ def circle(x1,y1,r):
 
         put_pixel(x1+x,y1+y,"red")
         put_pixel(x1+y,y1+x,"red")
-        put_pixel(x1-y,y1+x,"red")
-        put_pixel(x1-x,y1+y,"red")
-        put_pixel(x1-x,y1-y,"red")
-        put_pixel(x1-y,y1-x,"red")
-        put_pixel(x1+y,y1-x,"red")
-        put_pixel(x1+x,y1-y,"red")
+        put_pixel(x1-y,y1+x,"blue")
+        put_pixel(x1-x,y1+y,"blue")
+        put_pixel(x1-x,y1-y,"yellow")
+        put_pixel(x1-y,y1-x,"yellow")
+        put_pixel(x1+y,y1-x,"black")
+        put_pixel(x1+x,y1-y,"black")
         
         if(d<=0):
             y+=1

@@ -1,15 +1,24 @@
 from graphics import *
 import time
-win=GraphWin("A STRAIGHT LINE USING DDA LINE DRAWING ALGORITHM",900,900)
+win=GraphWin("DDA LINE DRAWING ALGORITHM 1",900,900)
 def main():
-    x1 = int(input("x1 = "))
-    y1 = int(input("y1 = "))
-    x2 = int(input("x2 = "))
-    y2 = int(input("y2 = "))
-    
-    line(x1,y1,x2,y2)
+    while True:
 
-    win.getMouse()
+        x1 = int(input("x1 = "))
+        y1 = int(input("y1 = "))
+        x2 = int(input("x2 = "))
+        y2 = int(input("y2 = "))
+        
+        line(x1,y1,x2,y2)
+
+        choice = input("'y' for drawing another line = ")
+        if choice == 'y' or choice == 'Y':
+            global win
+            win = GraphWin("DDA line drawing algorithm ",900,900)
+            continue
+        else:
+            break
+    # win.getMouse()
     win.close()
 
 def abs(n):

@@ -4,16 +4,24 @@ import time
 win = GraphWin("midpoint ellipse Algorithm", 1000,1000)
 
 def main():
-    xc = int(input("Enter the value of x coordinate: "))
-    yc = int(input("Enter the value of y coordinate: "))
-    rx = int(input("Enter the value of x-radius: "))
-    ry = int(input("Enter the value of y-radius: "))
-    h = int(input("Enter the height for cylider: "))
+    while True:
+        xc = int(input("Enter the value of x coordinate: "))
+        yc = int(input("Enter the value of y coordinate: "))
+        rx = int(input("Enter the value of x-radius: "))
+        ry = int(input("Enter the value of y-radius: "))
+        h = int(input("Enter the height for cylider: "))
 
-    for i in range(h):
-        ellipse(xc,yc-i,rx,ry)
+        for i in range(h):
+            ellipse(xc,yc-i,rx,ry)
 
-    win.getMouse()
+        choice = input("Enter 'y' to continue: ")
+        if choice == 'y' or choice == 'Y':
+            global win
+            win = GraphWin("midpoint ellipse algo",1000,1000)
+            continue
+        else:
+            break
+    # win.getMouse()
     win.close()
 
 def ellipse(xc,yc,rx,ry):
